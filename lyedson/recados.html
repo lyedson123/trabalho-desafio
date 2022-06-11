@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="./css/recados.css"/>
+
+</head>
+<body style="margin: 25px ;background-image: url(img/lyedson4.jpg);" >
+    <h2 style="background-color:#3120f0;">CADASTRO DE PRODUTOS</h2>
+    <div>
+        <form id="infos-prod">
+            <label for="name" style="background-color:#3120f0;">Nome: </label>
+            <input style="background-color:#3120f0;" type="text" id="nome" name="nome" placeholder="Arroz" required />
+
+            <label for="preco" style="background-color:#3120f0;">Preço: </label>
+            <input style="background-color:#3120f0;" type="number" id="preco" name="preco" placeholder="R$ 200,00" required/>
+
+            <input style="background-color:#3120f0;" type="checkbox" name="prime" id="prime">
+            <label style="background-color:#3120f0;" for="prime">É prime?</label>
+            <input style="background-color:#3120f0;" type="hidden" name="idx" id="idx" value="novo"  />
+            <button style="background-color:#3120f0;" type="submit" value="Salvar">Salvar</button>
+            <input style="background-color:#3120f0;" type="button" id="sair" value="Sair">
+        </form>
+        
+        <div id="msg-erro"></div>
+    </div>
+
+    <br><br>
+
+    <table border="1" style="margin:auto;">
+        <caption>
+            <h3 style="background-color:#3120f0;">LISTAS DE PRODUTOS</h3>
+        </caption>
+
+        <thead style="background-color:#3120f0;" >
+            
+            <tr>
+                <th style="background-color:#3120f0;">Identificador</th>
+                <th style="background-color:#3120f0;">Nome do produto</th>
+                <th style="background-color:#3120f0;">Preço do produto</th>
+                <th style="background-color:#3120f0;">Prime</th>
+                <th style="background-color:#3120f0;">Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    
+    <script src="js/recados.js"></script>
+</body>
+</html>
